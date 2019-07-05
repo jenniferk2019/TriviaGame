@@ -38,8 +38,15 @@ $(document).ready(function(){
     $("#start").click(function(){
       //timer??
     });
-    
+
     $("#stop").click(function(){
       $("div").stop();
     });
+
+    // Stowatch timer
+    var stopwatch = {
+        time: 0,
+        lap: 5,
+    }
+
   });
