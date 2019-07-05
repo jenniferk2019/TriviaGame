@@ -1,5 +1,5 @@
 // Variables
-// Set the questions for the quiz with the answers
+// Set the question functions for the quiz with the answers
 
 function () {
 
@@ -36,17 +36,19 @@ document.getElementById("number_correct").innerHTML = "You got " + correct + " c
 // Start and Stop buttons
 $(document).ready(function(){
     $("#start").click(function(){
-      //timer??
+      //How to link timer to begin button?
     });
 
     $("#stop").click(function(){
       $("div").stop();
     });
 
-    // Stowatch timer
-    var stopwatch = {
-        time: 0,
-        lap: 5,
-    }
+// Stowatch timer variable and function to count down
+var counter = 0;
+var timeleft = 10;
+
+        setInterval(function() {
+            $('.Timer').text((10 - timeleft) / 1000 + " Seconds");
+        }, 1000);
 
   });
