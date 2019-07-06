@@ -1,3 +1,32 @@
+// Timer object pulled from activity ten
+var timer = {
+
+  time: 15,
+
+  start: function() {
+
+    // DONE: Use setInterval to start the count here and set the clock to running.
+    if (!clockRunning) {
+      intervalId = setInterval(timer.count, 1000);
+      clockRunning = true;
+    }
+  },
+  stop: function() {
+
+    // DONE: Use clearInterval to stop the count here and set the clock to not be running.
+    clearInterval(intervalId);
+    clockRunning = false;
+  },
+  
+  count: function() {
+
+    // DONE: increment time by 1, remember we cant use "this" here.
+    timer.time--; 
+    $("#timer").text(timer.time + " seconds")
+  }
+
+};
+
 // Variables questions user got correct
 var quest1;
 var quest2;
@@ -74,85 +103,6 @@ function quiz() {
 
 }
 
-//When the window loads the quiz display the timer
-$("#timer").text("00:15");
-
-function timedText() {
-    setTimeout(myTimeout1, 15000) 
-    setTimeout(myTimeout2, 14000) 
-    setTimeout(myTimeout3, 13000)
-    setTimeout(myTimeout4, 12000) 
-    setTimeout(myTimeout5, 11000) 
-    setTimeout(myTimeout6, 10000) 
-    setTimeout(myTimeout7, 9000) 
-    setTimeout(myTimeout8, 8000) 
-    setTimeout(myTimeout9, 7000) 
-    setTimeout(myTimeout10, 6000) 
-    setTimeout(myTimeout11, 5000) 
-    setTimeout(myTimeout12, 4000) 
-    setTimeout(myTimeout13, 3000) 
-    setTimeout(myTimeout14, 2000) 
-    setTimeout(myTimeout15, 1000)
-    setTimeout(myTimeout16, 0000)   
-  }
-  function myTimeout16() {
-    document.getElementById("timer").innerHTML = "0 seconds";
-  }
-  function myTimeout15() {
-    document.getElementById("demo").innerHTML = "1 seconds";
-  }
-  function myTimeout14() {
-    document.getElementById("demo").innerHTML = "2 seconds";
-  }
-  function myTimeout13() {
-    document.getElementById("demo").innerHTML = "3 seconds";
-  }
-  function myTimeout12() {
-    document.getElementById("demo").innerHTML = "4 seconds";
-  }
-
-  function myTimeout11() {
-    document.getElementById("demo").innerHTML = "5 seconds";
-  }
-
-  function myTimeout10() {
-    document.getElementById("demo").innerHTML = "6 seconds";
-  }
-
-  function myTimeout9() {
-    document.getElementById("demo").innerHTML = "7 seconds";
-  }
-
-  function myTimeout8() {
-    document.getElementById("demo").innerHTML = "8 seconds";
-  }
-
-  function myTimeout7() {
-    document.getElementById("demo").innerHTML = "9 seconds";
-  }
-  function myTimeout6() {
-    document.getElementById("demo").innerHTML = "10 seconds";
-  }
-
-  function myTimeout5() {
-    document.getElementById("demo").innerHTML = "11 seconds";
-  }
-
-  function myTimeout4() {
-    document.getElementById("demo").innerHTML = "12 seconds";
-  }
-
-  function myTimeout3() {
-    document.getElementById("demo").innerHTML = "13 seconds";
-  }
-
-  function myTimeout2() {
-    document.getElementById("demo").innerHTML = "14 seconds";
-  }
-
-  function myTimeout1() {
-    document.getElementById("demo").innerHTML = "15 seconds";
-  }
 // Start and Stop buttons
 // start: function() {
 //     if (!clockRunning) {
