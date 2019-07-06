@@ -1,21 +1,34 @@
-// Variables
+// Variables questions user got correct
+var quest1;
+var quest2; 
+var quest3; 
+var quest4; 
+var quest5; 
+var quest6; 
+var quest7; 
+var quest8; 
+var quest9; 
+var quest10; 
+
+var score = 0;
+
+
 // Set the question functions for the quiz with the answers
 
 function quiz() {
 
-    var quest1 = document.quiz.quest1.value;
-    var quest2 = document.quiz.quest2.value;
-    var quest3 = document.quiz.quest3.value;
-    var quest4 = document.quiz.quest4.value;
-    var quest5 = document.quiz.quest5.value;
-    var quest6 = document.quiz.quest6.value;
-    var quest7 = document.quiz.quest7.value;
-    var quest8 = document.quiz.quest8.value;
-    var quest9 = document.quiz.quest7.value;
-    var quest10 = document.quiz.quest8.value;
+    quest1 = document.quiz.quest1.value;
+    quest2 = document.quiz.quest2.value;
+    quest3 = document.quiz.quest3.value;
+    quest4 = document.quiz.quest4.value;
+    quest5 = document.quiz.quest5.value;
+    quest6 = document.quiz.quest6.value;
+    quest7 = document.quiz.quest7.value;
+    quest8 = document.quiz.quest8.value;
+    quest9 = document.quiz.quest7.value;
+    quest10 = document.quiz.quest8.value;
 
-    // Questions user got correct
-    var score = 0;
+    console.log(quest1)
 
     // Setting [if] statments to confirm users response as correct or not
     if (quest1 == "Pink") {
@@ -61,24 +74,25 @@ function quiz() {
 
 // Score: Tell the user how many questions they got right out of the total
 // alert("You got " + score + "correct";
-document.getElementById("number_correct").innerHTML = "You got " + score);
+// document.getElementById("number_correct").innerHTML = "You got " + score;
 
+var timer= document.getElementById("timer").innerText;
+
+// Make sure document is ready before timer begins
 // Start and Stop buttons
-$(document).ready(function(){
-    $("#start").click(function(){
-      //How to link timer to begin button?
-    });
+$(document).ready(function () {
+    
+    $("#start").click(function () {
+        setInterval(function(){
+            timer = timer - 1
+        console.log(timer)
 
-    $("#stop").click(function(){
-      $("div").stop();
-    });
-
-// Stowatch timer variable and function to count down
-var counter = 0;
-var timeleft = 10;
-
-        setInterval(function() {
-            $('.Timer').text((10 - timeleft) / 1000 + " Seconds");
         }, 1000);
+        //if statment to make the timer stop at 0
+    });
 
-  });
+    $("#stop").click(function () {
+        $("div").stop();
+    });
+
+});
