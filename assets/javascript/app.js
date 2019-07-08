@@ -1,60 +1,8 @@
-// Setting up the main functions of the quiz first
-(function () {
-    function buildQuiz() {
-        // Variable to store the html output using const (tutor)
-        const output = [];
-        // Setting up each question now (used lambada function - stack to refer to "global/local scope") ...
-        quizQuestions.forEach(
-            (currentQuestion, questionNumber) => {
-                // Save the user's answer choices for each one
-                const answers = [];
-                for (letter in currentQuestion.answers) {
-                    // Radio button_jQuery function for html - MDN Wed Docs.mozailla.org & sitepoint.com
-                    answers.push(
-                        `<label>
-        <input type="radio" name="question${questionNumber}" value="${letter}">
-        ${letter} :
-        ${currentQuestion.answers[letter])
-                }
-      </label > `
-      console.log(quizQuestions)
-            );
-        }
-
-        output.push(
-            `< div class="question" > ${ currentQuestion.question } </div >
-                    <div class="answers"> ${answers.join("")} </div>`
-        );
-    });
-// Merge the output with the html
-quizContainer.innerHTML = output.join("");
-
-function showResults() {
-    // Getting the answers from the quiz
-    const answerContainers = quizContainer.querySelectorAll(".answers");
-    // Keeping track of the user's answers
-    var numCorrect = 0;
-    // Then for each of the questions in the quiz ...
-    quizQuestions.forEach((currentQuestion, questionNumber) => {
-        const answerContainer = answerContainers[questionNumber];
-        const selector = `input[name = question${ questionNumber }]: checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-        // If the answer is correct ...
-        if (userAnswer === currentQuestion.correctAnswer) {
-            // Then add to it the number of correct answers ...
-            numCorrect++;
-        }
-    });
-
-    // Finally, show the number of correct answers out of total listed in the quiz
-    resultsContainer.innerHTML = `${ numCorrect } out of ${ quizQuestions.length } `;
-}
-
 // Setting up variables to store html tags for reference (tutor advised to use const so the value can't be re-assigned)
 const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
+const currentQuestion = document.getElementById("question")
 const quizQuestions = [
     {
         // Setting up variables for questions using Javascript YouTube video by Mike Dane Tutorial #24
@@ -132,9 +80,25 @@ const quizQuestions = [
     }
 ];
 
-// Displaying the quiz first to user
-buildQuiz();
+//work on coding the radio button function for the quiz
+var incorrect = 0;
+var correct = 0;
 
-// When submitting quiz display the results to the user
-submitButton.addEventListener("click", showResults);
-});
+function startQuiz () {
+    //begin button that's seen in the beginning but then hides during the quiz
+    $("#startButton").html("<button id='startButton'>Start<button>")
+    $("#startButton").on("click", function () {
+console.log("click working")
+    });
+
+}
+
+///Now code the function to make the quiz questions appear************START HERE
+
+startQuiz()
+
+//submit button code function
+//work on coding the function to tell user their score and update the score (you got __/10 right stuff)
+
+//timer
+var time = 30
