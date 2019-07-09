@@ -1,12 +1,6 @@
-//Hide quiz until user hits start button to begin quiz:
-$(document).ready(function start() {
-    // Hide the form
-    $("#form").hide();
-    $(".start-button").click(function start() {
-        $("#form").show();
-    });
-
 //submit the quiz function and check the answers:
+var count = 0;
+
 function check() {
     var q1 = document.quizform.q1.value;
     var q2 = document.quizform.q2.value;
@@ -17,7 +11,6 @@ function check() {
     var q7 = document.quizform.q7.value;
     var q8 = document.quizform.q8.value;
 
-    var count = 0;
     //adding a point to the user's score when answering each question correctly:
     if (q1 == "b") {
         count++;
@@ -43,6 +36,28 @@ function check() {
     if (q8 == "c") {
         count++;
     }
-    submitButton.addEventListener("you got " +count+" correct", showResults);
+    alert("you got " + count + " correct");
 }
+
+// Hide quiz until user hits start button to begin quiz:
+$(document).ready(function start() {
+    // Hide the form
+    $("#form").hide();
+    //show the form
+    $(".start-button").click(function start() {
+        $("#form").show();
+        $("#timer").click(function start() {
+            var counter = 20;
+            setInterval(function start() {
+                counter--;
+                if (counter >= 0) {
+                    span = document.getElementById("timer");
+                    span.innerHtml = counter;
+                }
+                if (counter === 0) {
+                    clearInterval(counter);
+                }
+            }, 1000);
+        });
+    })
 });
