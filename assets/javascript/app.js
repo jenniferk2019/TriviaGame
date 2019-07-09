@@ -46,18 +46,14 @@ $(document).ready(function start() {
     //show the form
     $(".start-button").click(function start() {
         $("#form").show();
-        $("#timer").click(function start() {
-            var counter = 20;
-            setInterval(function start() {
-                counter--;
-                if (counter >= 0) {
-                    span = document.getElementById("timer");
-                    span.innerHtml = counter;
-                }
-                if (counter === 0) {
-                    clearInterval(counter);
-                }
-            }, 1000);
-        });
     })
 });
+// var myVar;
+
+// function myFunction() {
+//   myVar = setTimeout(function(){ alert("Hello"); }, 3000);
+// }
+
+// function myStopFunction() {
+//   clearTimeout(myVar);
+// }

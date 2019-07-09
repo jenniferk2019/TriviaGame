@@ -1,9 +1,18 @@
 body {
     font-family: 'Lobster Two';
-    background-image: url(../images/Barbie.JPG);
+    background-image: url(../images/bgbarbie.jpg);
     background-repeat: no-repeat; 
     background-size: cover;
     font-size: larger;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quiz{
+    background-color: hotpink;
+    margin: auto;
+    width: 262px;
+    height: 1168px;
 }
 
 .start-button {
@@ -26,4 +35,12 @@ body {
     width: 100px;
     font-family: 'Lobster Two';
     font-size: x-large;
+}
+
+.quizHeader {
+    background: url(../images/bg2barbie.gif);
+    height: 210px;
+    margin: 0;
+    color: black;
+    font-weight: normal;
 }
