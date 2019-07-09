@@ -7,27 +7,150 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <title>👑Trivia Game Quiz</title>
 </head>
 
 <body>
+    <h2 class="quizHeader">Barbie Quiz!</h2>
 
-    <!-- <button id="start">Begin</button>
+    <div>
+        <p class="question">What is Barbie's signature color?</p>
 
-    <p id="timer"></p> -->
-<div id="startButton"></div>
-    <div id="quiz">
-
-    <div id="question"></div>
+        <ul>
+            <input class="answer" type="radio" name="q1" value="0">
+            <label>Orange</label>
+            <br>
+            <input class="answer" type="radio" name="q1" value="1">
+            <label id="correctString1">Pink</label>
+            <br>
+            <input class="answer" type="radio" name="q1" value="0">
+            <label>Green</label>
+            <br>
+        </ul>
     </div>
 
-    <button id="submit">Submit</button>
+        <div>
+            <p class="question">Who is Barbie's best friend?</p>
 
-    <div id="results">
+            <ul>
+                <input class="answer" type="radio" name="q2" value="1">
+                <label id="correctString2">Ken</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                <label>Voltron</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                <label>Hulk</label>
+                <br>
+            </ul>
+        </div>
+    
+            <div>
+                <p class="question">Does Barbie like to dance?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q3" value="0">
+                    <label>Maybe</label>
+                    <br>
+                    <input class="answer" type="radio" name="q3" value="1">
+                    <label id="correctString3">Yes</label>
+                    <br>
+                    <input class="answer" type="radio" name="q3" value="0">
+                    <label>No</label>
+                    <br>
+                </ul>
+            </div>
+      
+            <div>
+                <p class="question">Where does Barbie live?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q4" value="0">
+                    <label>Malibu</label>
+                    <br>
+                    <input class="answer" type="radio" name="q4" value="0">
+                    <label>New York</label>
+                    <br>
+                    <input class="answer" type="radio" name="q4" value="1">
+                    <label id="correctString4">Both</label>
+                    <br>
+                </ul>
+            </div>
+
+            <div>
+                <p class="question">What would Barbie wear to the gym?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q5" value="1">
+                    <label id="correctString5">Sneakers</label>
+                    <br>
+                    <input class="answer" type="radio" name="q5" value="0">
+                    <label>Heels</label>
+                    <br>
+                    <input class="answer" type="radio" name="q5" value="0">
+                    <label>Slippers</label>
+                    <br>
+                </ul>
+            </div>
+
+            <div>
+                <p class="question">Does Barbie live in a Dreamhouse?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q6" value="1">
+                    <label id="correctString6">Yes</label>
+                    <br>
+                    <input class="answer" type="radio" name="q6" value="0">
+                    <label>Maybe</label>
+                    <br>
+                    <input class="answer" type="radio" name="q6" value="0">
+                    <label>No</label>
+                    <br>
+                </ul>
+            </div>
+
+            <div>
+                <p class="question">What kind of job does Barbie have?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q7" value="0">
+                    <label>Model</label>
+                    <br>
+                    <input class="answer" type="radio" name="q7" value="0">
+                    <label>Doctor</label>
+                    <br>
+                    <input class="answer" type="radio" name="q7" value="1">
+                    <label id="correctString7">Both</label>
+                    <br>
+                </ul>
+            </div>
+
+            <div>
+                <p class="question">What would Barbie wear to a ball?</p>
+
+                <ul>
+                    <input class="answer" type="radio" name="q8" value="0">
+                    <label>Swimsuit</label>
+                    <br>
+                    <input class="answer" type="radio" name="q8" value="1">
+                    <label id="correctString8">Gown</label>
+                    <br>
+                    <input class="answer" type="radio" name="q8" value="0">
+                    <label>Jeans</label>
+                    <br>
+                </ul>
+            </div>
+
+    <br />
+    
+    <div>
+        <h2 class="quizScore" id="userScore"></h2>
+    </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 
 </body>
