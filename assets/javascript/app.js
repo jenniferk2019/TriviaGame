@@ -3,7 +3,7 @@ $(document).ready(function start() {
     // Hide the form
     $("#form").hide();
     $(".start-button").click(function start() {
-        $("#form").Toggle();
+        $("#form").show();
     });
 
 //submit the quiz function and check the answers:
