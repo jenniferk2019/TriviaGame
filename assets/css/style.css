@@ -6,10 +6,24 @@ body {
     font-size: larger;
 }
 
-.question {
-    background: pink;
+.start-button {
+    background-color: pink;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-family: 'Lobster Two';
+    font-size: x-large;
 }
 
-#number_correct {
-    display: none;
+.submit-button {
+    background-color: pink;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-family: 'Lobster Two';
+    font-size: x-large;
 }
