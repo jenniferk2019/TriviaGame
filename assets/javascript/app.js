@@ -1,3 +1,11 @@
+//Hide quiz until user hits start button to begin quiz:
+$(document).ready(function start() {
+    // Hide the form
+    $("#form").hide();
+    $(".start-button").click(function start() {
+        $("#form").Toggle();
+    });
+
 //submit the quiz function and check the answers:
 function check() {
     var q1 = document.quizform.q1.value;
@@ -35,5 +43,6 @@ function check() {
     if (q8 == "c") {
         count++;
     }
-    alert("you got " +count+" correct");
+    submitButton.addEventListener("you got " +count+" correct", showResults);
 }
+});

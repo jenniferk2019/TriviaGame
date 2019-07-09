@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div id="hide-start"><button class="start-button" onclick="start()">Start Quiz</button></div>
     <h1 class="quizHeader">Barbie Quiz!</h1>
+    <div id="hide"><button class="start-button" onclick="start()">Start Quiz</button></div>
 
-    <form name="quizform">
+    <form id="form" name="quizform">
         <p>What is Barbie's signature color?</p>
         <input type="radio" name="q1" value="a">Orange<br />
         <input type="radio" name="q1" value="b">Pink<br />
@@ -57,7 +57,8 @@
         <br />
         <input class="submit-button" type="button" value="submit" onclick="check()">
     </form>
-
+    <br />
+    <p>Score: <text id="score-num">0</text></p>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
