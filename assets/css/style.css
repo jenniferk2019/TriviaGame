@@ -1,5 +1,13 @@
 body {
     font-family: 'Lobster Two';
+    background-image: url(../images/Barbie.JPG);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-size: larger;
+}
+
+.question {
+    background: pink;
 }
 
 #number_correct {

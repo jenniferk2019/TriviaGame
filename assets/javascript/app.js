@@ -1,47 +1,15 @@
 //submit the quiz function:
-
 function submitQuiz() {
 
-    //getting an answer for each question score
-    function answerScore(quizQuest) {
-        var radioButton = document.getElementsByName(quizQuest);
+//when user selects submit button, the button should recognize each answer selected
+    
 
-        for (var i = 0, length = radioButton.length; i < length; i++) {
-            if (radioButton[i].checked) {
-                var answerValue = Number(radioButton[i].value);
-            }
-        }
-        if (isNaN(answerValue)) {
-            answerValue = 0;
-        }
-        return answerValue;
-    }
+//write a code that generates the calculated score with the function that establishses the users input
 
-    //calculate the score with the answerScore function
-    var totalScore = (answerScore("q1") + answerScore("q2") + answerScore("q3") + answerScore("q4") + answerScore("q5") + answerScore("q6") + + answerScore("q7") + answerScore("q8"));
-    console.log("totalScore: " + totalScore);
 
-    //calculate the 'possible score' integer function:
-    var questCount = document.getElementsByClassName("question");
+//if the user answers all of the questions correctly, reveal "Congrats," which will be hidden in the meantime until user finishes the quiz
 
-    var questCounter = 0;
-
-    for (var i = 0; i < questCount[i].length; i < length; i++) {
-        var userChoice = questCount[i].value;
-        console.log(userChoice);;
-    }
-
-    //the "total-score"
-    var totalScore = "Your Score: " + numScore;
-
-    // if 8 / 8,
-    if (numScore === questCounter) {
-        showScore = showScore
-    };
-
-    //html 'userScore' id
-    document.getElementById('userScore').innerHTML = showScore;
-}
+//code to reveal score linked to the submitButton
 
 $(document).ready(function () {
 
