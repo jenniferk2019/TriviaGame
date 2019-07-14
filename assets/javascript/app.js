@@ -3,7 +3,7 @@ $( document ).ready(function() {
     var count = 0;
     var counter = 0;
     var intervalId;
-    
+    $("#score").hide();
     var timer = {
 
         time: 15,
@@ -69,7 +69,8 @@ $( document ).ready(function() {
         if (q8 == "c") {
             count++;
         }
-        alert("you got " + count + " correct");
+        $("#score").html("you got " + count + " correct");
+        timer.stop();
     }
     
     // Hide quiz until user hits start button to begin quiz:
@@ -86,7 +87,10 @@ $( document ).ready(function() {
             timer.time--;
             $("#clock").html(timer.time);
             if (timer.time === 0) {
-                stop();
+                timer.stop();
+                $("#form").hide();
+                $("#score").show();
+                check();
                 alert("Times Up!");
             }
         }
